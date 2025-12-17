@@ -2,8 +2,8 @@
 import joblib, os, pathlib, pandas as pd, xgboost as xgb
 
 ROOT = pathlib.Path(__file__).resolve().parent
-model = joblib.load(ROOT / "artifacts/xgb_fraud_2025.bin")
-feature_names = joblib.load(ROOT / "artifacts/feature_names.joblib")
+model = joblib.load("xgb_fraud_2025.bin")
+feature_names = joblib.load("feature_names.joblib")
 
 def preprocess(df_raw):
     """Exactly the same steps you used in the notebook."""
